@@ -79,7 +79,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'forexdb',
         'USER': 'gtuser',
-        'PASSWORD': 'rpython2020',
+        'PASSWORD': '',
         'HOST': '104.197.208.53',
         'PORT': '5432',
     }
