@@ -5,7 +5,7 @@ class ForexCurrent(models.Model):
     Date=models.DateField(auto_now=False, auto_now_add=False)
     AUD=models.DecimalField(max_digits=23, decimal_places=2)
     EUR=models.DecimalField(max_digits=23, decimal_places=2)
-    NCD=models.DecimalField(max_digits=23, decimal_places=2)
+    NZD=models.DecimalField(max_digits=23, decimal_places=2)
     GBP=models.DecimalField(max_digits=23, decimal_places=2)
     BRL=models.DecimalField(max_digits=23, decimal_places=2)
     CAD=models.DecimalField(max_digits=23, decimal_places=2)
@@ -30,5 +30,6 @@ class ForexCurrent(models.Model):
         return self.Date
     class Meta:
         verbose_name_plural = "ForexCurrentRates"
+        managed=False
         app_label='forexapp'
         db_table='ForexCurrent'
