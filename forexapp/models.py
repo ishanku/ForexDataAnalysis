@@ -25,7 +25,7 @@ class ForexCurrent(models.Model):
     CHF=models.DecimalField(max_digits=23, decimal_places=2)
     TWD=models.DecimalField(max_digits=23, decimal_places=2)
     THB=models.DecimalField(max_digits=23, decimal_places=2)
-
+    
     def __str__(self):
         return self.Date
     class Meta:

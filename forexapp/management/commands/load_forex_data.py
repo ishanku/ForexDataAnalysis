@@ -22,7 +22,7 @@ class Command(BaseCommand):
             print(ALREADY_LOADED_ERROR_MESSAGE)
             return
         print("Loading ForexCurrentDate")
-        for fl in DictReader(open('/Users/rajarajen/Documents/Practice/GeorgiaTech/Projectwork/ForexDataAnalysis/Resources/forex_historical.csv')):
+        for fl in DictReader(open('/Users/rajarajen/Documents/Practice/GeorgiaTech/Projectwork/ForexDataAnalysis/Resources/forexhistorical.csv')):
             forex=ForexCurrent()
             forex.Date=fl['Date']
             forex.AUD=fl['AUD']
