@@ -1,5 +1,9 @@
 # FOREX DATA ETL
 
+## Heat Map - Data Story for FOREX
+
+![Graphs/ForexCurrentHeatMap.png](Graphs/ForexCurrentHeatMap.png)
+
 ## Pre-requisites
 
   1. Python
