@@ -49,7 +49,7 @@ class Command(BaseCommand):
             forex.THB=fl['THB']
             forex.save()
         print("Loading ForexHistorical Data")
-        for fl in DictReader(open('./Resources/final_historical.csv')):
+        for fl in DictReader(open('./Resources/forexhistorical.csv')):
             forex=ForexHistoric()
             forex.Date=fl['Date']
             forex.AUD=fl['AUD']
