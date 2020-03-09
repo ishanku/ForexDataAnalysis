@@ -1,6 +1,7 @@
 # FOREX DATA ETL
 
 ## Pre-requisites
+
   1. Python
   2. Pandas
   3. psycopy2
