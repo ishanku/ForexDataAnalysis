@@ -17,7 +17,7 @@ Django Admin Super User:
 User: gtuser
 Password: rpython
 
-## postgresql used in this project is from Google Cloud and the access is restricted from GeorgiaTech IP only.
+## "postgresql" used in this project is from Google Cloud and the access is restricted from GeorgiaTech IP only.
 
 
 
