@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<h1 class="cover-heading">WELCOME TO FOREX ETL</h1>
+<p class="lead">Forex Current Data</p>
+{% endblock %}
+{% block datacontent %}
+<table id="partnerTable" class="display" >
+  <thead>
+    <tr>
+        <th>Date</th>
+        <th>AUD</th>
+        <th>EUR</th>
+        <th>NZD</th>
+        <th>GBP</th>
+        <th>BRL</th>
+        <th>CAD</th>
+        <th>CNY</th>
+        <th>HKD</th>
+        <th>INR</th>
+        <th>KRW</th>
+        <th>MXN</th>
+        <th>ZAR</th>
+        <th>SGD</th>
+        <th>DKK</th>
+        <th>JPY</th>
+        <th>MYR</th>
+        <th>NOK</th>
+        <th>SEK</th>
+        <th>LKR</th>
+        <th>CHF</th>
+        <th>TWD</th>
+        <th>THB</th>
+    </tr>
+  </thead>
+  <tbody>
+{% for d in data %}
+    <tr>
+      <td>{{ d.Date }}</td>
+      <td>{{ d.AUD }}</td>
+      <td>{{ d.EUR }}</td>
+      <td>{{ d.NZD }}</td>
+      <td>{{ d.GBP }}</td>
+      <td>{{ d.BRL }}</td>
+      <td>{{ d.CAD }}</td>
+      <td>{{ d.CNY }}</td>
+      <td>{{ d.HKD }}</td>
+      <td>{{ d.INR }}</td>
+      <td>{{ d.KRW }}</td>
+      <td>{{ d.MXN }}</td>
+      <td>{{ d.ZAR }}</td>
+      <td>{{ d.SGD }}</td>
+      <td>{{ d.DKK }}</td>
+      <td>{{ d.JPY }}</td>
+      <td>{{ d.MYR }}</td>
+      <td>{{ d.NOK }}</td>
+      <td>{{ d.SEK }}</td>
+      <td>{{ d.LKR }}</td>
+      <td>{{ d.CHF }}</td>
+      <td>{{ d.TWD }}</td>
+      <td>{{ d.THB }}</td>
+    </tr>
+{% endfor %}
+  </tbody>
+  </table>
+{% endblock %}
