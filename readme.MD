@@ -27,5 +27,27 @@ Password: rpython
 
 
 
-## For Public Access Please update the settings.py
-"DATABASE"
+## For Public Access Please update the settings.py for postgresql
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2', * postgresql
+        'NAME': 'databasename',
+        'USER': 'user',
+        'PASSWORD': 'password',
+        'HOST': 'hostname  or ip',
+        'PORT': 'port',
+    }
+}
+
+## Django Instructions
+1. Clone the repository URL https://github.com/ishanku/ForexDataAnalysis
+3. Go to the Folder "ForexDataAnalysis"
+4. conda activate "<your virtual environment name>"
+5. conda install django
+
+## To Create Models after updating settings.py
+1. python3 manage.py makemigrations
+2. python3 manage.py migrate
+3. python3 manage.py runserver
+
+This will launch Django in the port number 8000 visit http://localhost:8000
