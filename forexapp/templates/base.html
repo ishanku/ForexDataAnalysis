@@ -1,4 +1,5 @@
 <!doctype html>
+{% load static %}
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -9,9 +10,28 @@
     <title>ETL PROJECT 0 FOREX DATA ETL</title>
 
 
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+  integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+<link href="https://stackpath.bootstrapcdn.com/bootswatch/4.1.3/yeti/bootstrap.min.css" rel="stylesheet"
+  integrity="sha384-MEq8xmFd953gp2FVvLd8DUEvfBjGCzDjem+gmDqfyyWcaxX4BUD7TtSu1EszNTvK" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="{% static 'DataTables/DataTables-1.10.18/css/jquery.dataTables.css' %}">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
     <!-- Bootstrap core CSS -->
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<script type="text/javascript" language="javascript" src="https://code.jquery.com/jquery-3.3.1.js"></script>
+<script type="text/javascript" language="javascript"
+  src="{% static '/DataTables/DataTables-1.10.18/js/jquery.dataTables.js' %}"></script>
+<script type="text/javascript" language="javascript" class="init">
 
+  $(document).ready(function () {
+    $('#partnerTable').DataTable({
+      "lengthMenu": [[5, 10, 25, -1], [5, 10, 25, "All"]]
+    });
+  });
+</script>
 <meta name="theme-color" content="#563d7c">
 
 
@@ -38,7 +58,7 @@
     <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
   <header class="masthead mb-auto">
     <div class="inner">
-      <h3 class="masthead-brand">Cover</h3>
+      <h3 class="masthead-brand">GT Data Analytics - ETL Project</h3>
       <nav class="nav nav-masthead justify-content-center">
         <a class="nav-link active" href="#">Home</a>
         <a class="nav-link" href="#">FOREX CURRENT</a>
@@ -48,21 +68,19 @@
   </header>
 
   <main role="main" class="inner cover">
-    <h1 class="cover-heading">WELCOME TO FOREX ETL</h1>
-    <p class="lead">ETL is short for extract, transform, load, three database functions that are combined into one tool to pull data out of one database and place it into another database.<br>
-      Extract is the process of reading data from a database. In this stage, the data is collected, often from multiple and different types of sources.<br><br>
-
-Transform is the process of converting the extracted data from its previous form into the form it needs to be in so that it can be placed into another database. Transformation occurs by using rules or lookup tables or by combining the data with other data.<br><br>
-
-Load is the process of writing the data into the target database.</p>
-    <p class="lead">
-      <a href="#" class="btn btn-lg btn-secondary">More >></a>
-    </p>
+    <div class="jumbotron">
+    {% block content %}
+    {% endblock %}
+  </div>
+ <div class="container">
+   {% block datacontent %}
+   {% endblock %}
+ </div>
   </main>
 
   <footer class="mastfoot mt-auto">
     <div class="inner">
-      <p>FOREX ETL, by Ssiva,Roopa,Khushi & Julie.</p>
+      <p>FOREX ETL by Ssiva,Roopa,Khushi & Julie.</p>
     </div>
   </footer>
 </div>

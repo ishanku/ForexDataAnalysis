@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<h1 class="cover-heading">WELCOME TO FOREX ETL</h1>
+<p class="lead">Forex Historical Data</p>
+{% endblock %}
+{% block datacontent %}
+<table id="partnerTable" class="display" >
+  <thead>
+    <tr>
+    <th>#</th>
+    <th>City ID</th>
+    <th>City</th>
+    <th>Cloudiness</th>
+    <th>Country</th>
+    <th>Date</th>
+    <th>Humidity</th>
+    <th>Lat</th>
+    <th>Lng</th>
+    <th>Max Temp</th>
+    <th>Wind Speed</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>0</td>
+      <td>0</td>
+      <td>jacareacanga</td>
+      <td>0</td>
+      <td>BR</td>
+      <td>1528902000</td>
+      <td>62</td>
+      <td>-6.22</td>
+      <td>-57.76</td>
+      <td>89.60</td>
+      <td>6.93</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>1</td>
+      <td>kaitangata</td>
+      <td>100</td>
+      <td>NZ</td>
+      <td>1528905304</td>
+      <td>94</td>
+      <td>-46.28</td>
+      <td>169.85</td>
+      <td>42.61</td>
+      <td>5.64</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>2</td>
+      <td>goulburn</td>
+      <td>20</td>
+      <td>AU</td>
+      <td>1528905078</td>
+      <td>91</td>
+      <td>-34.75</td>
+      <td>149.72</td>
+      <td>44.32</td>
+      <td>10.11</td>
+    </tr>
+  </tbody>
+  </table>
+{% endblock %}
