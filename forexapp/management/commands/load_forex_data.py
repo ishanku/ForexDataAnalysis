@@ -1,7 +1,7 @@
 from csv import DictReader
 from datetime import datetime
 from django.core.management import BaseCommand
-from forexapp.models import ForexCurrent,ForexHistory
+from forexapp.models import ForexCurrent,ForexHistoric
 from pytz import UTC
 
 
@@ -17,7 +17,7 @@ class Command(BaseCommand):
     help = "Loads data from csv into our model"
 
     def handle(self, *args, **options):
-        if ForexCurrent.objects.exists():
+        if ForexCurrent.objects.exists() and ForexHistoric.objects.exists():
             print('ForexCurrent data already loaded...exiting.')
             print(ALREADY_LOADED_ERROR_MESSAGE)
             return
@@ -49,7 +49,7 @@ class Command(BaseCommand):
             forex.THB=fl['THB']
             forex.save()
         print("Loading ForexHistorical Data")
-        for fl in DictReader(open('/Users/rajarajen/Documents/Practice/GeorgiaTech/Projectwork/ForexDataAnalysis/Resources/final_historical.csv')):
+        for fl in DictReader(open('./Resources/final_historical.csv')):
             forex=ForexHistoric()
             forex.Date=fl['Date']
             forex.AUD=fl['AUD']
