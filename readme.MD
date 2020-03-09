@@ -1,11 +1,11 @@
 # FOREX DATA ETL
 
 ## Pre-requisites
-  Python
-  Pandas
-  psycopy2
-  django
-  postgresql
+  1. Python
+  2. Pandas
+  3. psycopy2
+  4. django
+  5. postgresql
 
 
 ## To run the Django PROJECT
