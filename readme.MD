@@ -12,4 +12,6 @@ This is a ETL project for Foriegn Exchange Data from twenty-two countries for th
 
 ## Details
   All the details regarding the project can be found here:
-  docs/ForexData_Word.docx
+
+
+docs/ForexData_Word.docx
