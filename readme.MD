@@ -9,6 +9,12 @@ This is a ETL project for Foriegn Exchange Data from twenty-two countries for th
   4. django
   5. postgresql
   
+## Details
+  All the details regarding the project can be found here:
+
+
+docs/ForexData_Word.docx
+  
 ## Django 
 
 python3 manage.py runserver
@@ -51,8 +57,4 @@ This will launch Django in the port number 8000 visit http://localhost:8000
 
 
 
-## Details
-  All the details regarding the project can be found here:
 
-
-docs/ForexData_Word.docx
